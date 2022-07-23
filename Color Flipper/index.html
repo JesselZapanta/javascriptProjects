@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+</head>
+<body>
+    <h1>Random Color Generator</h1>
+    <button id="btn">Click Me</button>
+    <h2 id="color"></h2>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h1{
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+        #btn{
+            padding: 1rem 5rem;
+            border: 1px solid black;
+            background-color: rgba(132, 224, 126, .4);
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        #color{
+            font-family: inherit;
+        }
+    </style>
+    <script>
+    const btn = document.getElementById("btn");
+
+    // btn.addEventListener("click", () => {
+    //     colors = [];
+    //         for(i=0; i<3; i++){
+    //             colors.push(Math.floor(Math.random() * 256 ) + 0);
+    //         }
+    //         document.body.style.backgroundColor = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
+    //         document.getElementById("color").innerText = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
+    // })
+        
+    setInterval(() => {
+        colors = [];
+            for(i=0; i<3; i++){
+                colors.push(Math.floor(Math.random() * 256 ) + 0);
+            }
+            document.body.style.backgroundColor = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
+            document.getElementById("color").innerText = `rgb(${colors[0]},${colors[1]},${colors[2]})`;
+    }, 1000);
+
+    // colors = ["red", "blue", "green","black", "orange","yellow", "blue","purple"];
+    // btn.addEventListener("click", () => {
+    //     rand  = Math.floor(Math.random() * colors.length);
+        
+    //     document.body.style.backgroundColor = colors[rand];
+    //     document.getElementById("color").innerText = colors[rand];
+    // })
+    </script>
+</body>
+</html>
