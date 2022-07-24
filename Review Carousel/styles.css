@@ -81,3 +81,12 @@ button:hover{
     background-color: transparent;
     margin: .5rem 0;
 }
+@media(max-width: 600px){
+    .continer{
+        width: 100vw;
+        height: 100vh;
+    }
+    button{
+        margin: 0 3rem;
+    }
+}
