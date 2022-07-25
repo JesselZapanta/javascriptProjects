@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #F1F5F8;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+aside{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 0 30px #d1dadf;
+}
+.logo{
+    padding: 1rem;
+    display: flex;
+}
+.logo h2{
+    font-size: 2rem;
+    color: #4BA6E8;
+}
+#close-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: none;
+}
+
+#close-btn i{
+    font-size: 1.6rem;
+    color: #BA2424;
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}
+.links li {
+    margin: 0 2rem;
+    list-style: none;
+}
+
+.links li a{
+    text-decoration: none;
+    color: #5A7B95;
+}
+
+
+.socials{
+    margin: 0 3rem;
+}
+.socials a{
+    font-size: 1.2rem;
+    margin: 0 .3rem;
+    color: #49A6EA;
+}
+
+
+#open-btn{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+#open-btn i{
+    font-size: 1.6rem;
+    color: #49A6EA;
+    cursor: pointer;
+}
+
+@media(max-width: 1200px){
+    aside{
+        position: fixed;
+        left: -100%;
+        width: 30%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 10px 0 30px #d1dadf;;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 300ms ease-in-out;
+        position: relative;
+    }
+    aside.active{
+        left: 0;
+    }
+    .links{
+        flex-direction: column;
+        text-align: center;
+    }
+    .links li{
+        margin: 1.4rem 0;
+    }
+    .socials{
+        position: absolute;
+        bottom: 1rem;
+    }
+    #open-btn{
+        display: block;
+    }
+    #close-btn{
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+@media(max-width: 900px){
+    aside{
+        width: 40%;
+    }
+}
+@media(max-width: 800px){
+    aside{
+        width: 50%;
+    }
+}
+@media(max-width: 700px){
+    aside{
+        width: 60%;
+    }
+}
+@media(max-width: 600px){
+    aside{
+        width: 70%;
+    }
+}
+@media(max-width: 500px){
+    aside{
+        width: 75%;
+    }
+}
+@media(max-width: 400px){
+    aside{
+        width: 80%;
+    }
+}
+@media(max-width: 300px){
+    aside{
+        width: 85%;
+    }
+}
+@media(max-width: 250px){
+    aside{
+        width: 90%;
+    }
+}
