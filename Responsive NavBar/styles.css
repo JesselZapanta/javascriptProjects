@@ -18,33 +18,26 @@ nav{
 }
 
 aside{
-    position: fixed;
-    left: -100%;
-    min-width: 20%;
-    min-height: 100vh;
-    background-color: #fff;
-    box-shadow: 10px 0 30px #d1dadf;;
-    padding: 1rem;
-    transition: all 300ms ease-in-out;
-    position: relative;
-
-}
-aside.active{
-    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 0 30px #d1dadf;
 }
 .logo{
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
 }
 .logo h2{
     font-size: 2rem;
-    padding-right: 3rem;
     color: #4BA6E8;
 }
 #close-btn{
     border: none;
     outline: none;
     background-color: transparent;
+    display: none;
 }
 
 #close-btn i{
@@ -52,32 +45,31 @@ aside.active{
     color: #BA2424;
     cursor: pointer;
 }
+
 .links{
     display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-    gap: 1.4rem;
+    align-items: center;
 }
 .links li {
+    margin: 0 2rem;
     list-style: none;
 }
+
 .links li a{
     text-decoration: none;
     color: #5A7B95;
 }
 
+
 .socials{
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    display: flex;
-    gap: 1rem;
-    transform: translateX(-50%);
+    margin: 0 3rem;
 }
 .socials a{
     font-size: 1.2rem;
+    margin: 0 .3rem;
     color: #49A6EA;
 }
+
 
 #open-btn{
     margin: 1rem;
@@ -86,10 +78,62 @@ aside.active{
     background-color: transparent;
     border: none;
     outline: none;
+    display: none;
 }
 
 #open-btn i{
     font-size: 1.6rem;
     color: #49A6EA;
     cursor: pointer;
+}
+
+@media(max-width: 1200px){
+    aside{
+        position: fixed;
+        left: -100%;
+        width: 30%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 10px 0 30px #d1dadf;;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 300ms ease-in-out;
+        position: relative;
+    }
+    aside.active{
+        left: 0;
+    }
+    .links{
+        flex-direction: column;
+        text-align: center;
+    }
+    .links li{
+        margin: 1.4rem 0;
+    }
+    .socials{
+        position: absolute;
+        bottom: 1rem;
+    }
+    #open-btn{
+        display: block;
+    }
+    #close-btn{
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+@media(max-width: 900px){
+    aside{
+        width: 40%;
+    }
+}
+@media(max-width: 300px){
+    aside{
+        width: 70%;
+    }
 }
