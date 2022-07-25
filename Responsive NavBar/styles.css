@@ -127,19 +127,29 @@ aside{
     }
 }
 
+
 @media(max-width: 900px){
     aside{
         width: 40%;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 800px){
+    aside{
+        width: 50%;
+    }
+}
+@media(max-width: 700px){
+    aside{
+        width: 60%;
+    }
+}
+@media(max-width: 600px){
     aside{
         width: 70%;
     }
 }
-
 @media(max-width: 300px){
     aside{
-        width: 70%;
+        width: 80%;
     }
 }
